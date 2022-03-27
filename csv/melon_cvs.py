@@ -20,7 +20,7 @@ for i in lst50:
     temp.append(i.select_one('.ellipsis.rank03').a.text)
     melonList.append(temp)
 
-width open('melon_csv','w',encoding='utf-8', newline = '') as f:
+with open('melon_csv','w',encoding='utf-8', newline = '') as f:
     writer = cvs.writer(f)
     writer.writerow(['rank','artist', 'title', 'album'])
     writer.writerows(melonList)
